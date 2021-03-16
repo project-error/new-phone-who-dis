@@ -15,20 +15,12 @@ import DocumentList from './list/DoucmentList';
 import NoteList from './list/NoteList';
 
 export const NotesApp = () => {
-  const classes = useStyles();
-  const history = useHistory();
-  const notesApp = useApp('DOCUMENTS');
-  const { setDetail } = useNoteDetail();
-
-  const onClickCreate = () => {
-    setDetail({ title: '', content: '' });
-    history.push('/notes/detail');
-  };
+  const documentsApp = useApp('DOCUMENTS');
 
   return (
     <DocumentsThemeProvider>
       <AppWrapper id="documents-app">
-        <AppTitle app={notesApp} />
+        <AppTitle app={documentsApp} />
         <Route path="/documents/notes/detail" component={NoteModal} />
         <AppContent>
           <Route path="/documents" exact component={DocumentList} />
