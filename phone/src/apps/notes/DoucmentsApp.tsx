@@ -7,9 +7,9 @@ import { NoteModal } from './modal/NoteModal';
 import { Fab } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import { useNoteDetail } from './hooks/useNoteDetail';
-import useStyles from './notes.styles';
+import useStyles from './documents.styles';
 import InjectDebugData from '../../os/debug/InjectDebugData';
-import { NotesThemeProvider } from './providers/NotesThemeProvider';
+import { DocumentsThemeProvider } from './providers/DoucmentsThemeProvider';
 import { Route, useHistory } from 'react-router-dom';
 import DocumentList from './list/DoucmentList';
 import NoteList from './list/NoteList';
@@ -26,7 +26,7 @@ export const NotesApp = () => {
   };
 
   return (
-    <NotesThemeProvider>
+    <DocumentsThemeProvider>
       <AppWrapper id="documents-app">
         <AppTitle app={notesApp} />
         <Route path="/documents/notes/detail" component={NoteModal} />
@@ -35,7 +35,7 @@ export const NotesApp = () => {
           <Route path="/documents/notes" exact component={NoteList} />
         </AppContent>
       </AppWrapper>
-    </NotesThemeProvider>
+    </DocumentsThemeProvider>
   );
 };
 

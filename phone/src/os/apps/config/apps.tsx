@@ -44,7 +44,7 @@ import {
 import {
   DOCUMENTS_APP_ICON_COLOR,
   DOCUMENTS_APP_PRIMARY_COLOR,
-} from '../../../apps/notes/notes.theme';
+} from '../../../apps/notes/documents.theme';
 import { DIALER_APP_PRIMARY_COLOR, DIALER_APP_TEXT_COLOR } from '../../../apps/dialer/dialer.theme';
 import {
   TWITTER_APP_PRIMARY_COLOR,

@@ -3,7 +3,7 @@ import { List, ListItem, ListItemText } from '@material-ui/core';
 import { useNoteDetail } from '../hooks/useNoteDetail';
 import { useNotes } from '../hooks/useNotes';
 import { useHistory } from 'react-router-dom';
-import useStyles from '../notes.styles';
+import useStyles from '../documents.styles';
 
 // add search bar later
 // TODO: Add interface for note
