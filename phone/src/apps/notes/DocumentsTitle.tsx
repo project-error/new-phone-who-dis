@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { makeStyles, Paper } from '@material-ui/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStickyNote } from '@fortawesome/free-solid-svg-icons';
+import FolderIcon from '@material-ui/icons/Folder';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -24,7 +23,7 @@ const NotesTitle = () => {
   const classes = useStyles();
   return (
     <Paper elevation={24} square variant="outlined" className={classes.header}>
-      <FontAwesomeIcon icon={faStickyNote} className={classes.icon} size="lg" />
+      <FolderIcon fontSize="large" />
     </Paper>
   );
 };

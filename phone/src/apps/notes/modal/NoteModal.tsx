@@ -66,7 +66,7 @@ export const NoteModal = () => {
                   startIcon={<ArrowBackIcon fontSize="large" />}
                   onClick={_handleClose}
                 >
-                  {t('APPS_NOTES')}
+                  {t('APPS_DOCUMENTS_NOTES_TITLE')}
                 </Button>
               </Box>
               <TextField
