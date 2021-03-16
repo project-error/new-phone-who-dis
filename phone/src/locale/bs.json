@@ -11,7 +11,7 @@
     "APPS_CALCULATOR": "Calculator",
     "APPS_SETTINGS": "Postavke",
     "APPS_BANK": "WhoDis Banka",
-    "APPS_NOTES": "Bilješke",
+    "APPS_DOCUMENTS": "Bilješke",
     "APPS_EXAMPLE": "Primjerna Aplikacija",
     "APPS_TWITTER": "Twitter",
     "APPS_SELLOUT": "Market",
@@ -97,12 +97,12 @@
     "APPS_CONTACT_MODAL_PLACEHOLDER_AVATAR": "Avatar",
     "APPS_CONTACT_MODAL_BUTTON_ADD": "Dodajte kontakt",
 
-    "APPS_NOTES_ADD_SUCCESS": "Bilješka je uspješno spremljena.",
-    "APPS_NOTES_ADD_FAILED": "Spremanje bilješke nije uspjelo.",
-    "APPS_NOTES_UPDATE_SUCCESS": "Bilješka je uspješno ažurirana.",
-    "APPS_NOTES_UPDATE_FAILED": "Ažuriranje bilješke nije uspjelo.",
-    "APPS_NOTES_DELETE_SUCCESS": "Bilješka je uspješno izbrisana.",
-    "APPS_NOTES_DELETE_FAILED": "Brisanje bilješke nije uspjelo.",
+    "APPS_DOCUMENTS_ADD_SUCCESS": "Bilješka je uspješno spremljena.",
+    "APPS_DOCUMENTS_ADD_FAILED": "Spremanje bilješke nije uspjelo.",
+    "APPS_DOCUMENTS_UPDATE_SUCCESS": "Bilješka je uspješno ažurirana.",
+    "APPS_DOCUMENTS_UPDATE_FAILED": "Ažuriranje bilješke nije uspjelo.",
+    "APPS_DOCUMENTS_DELETE_SUCCESS": "Bilješka je uspješno izbrisana.",
+    "APPS_DOCUMENTS_DELETE_FAILED": "Brisanje bilješke nije uspjelo.",
 
     "APPS_CALCULATOR_COPIED": "Rezultat je kopiran u međuspremnik!",
 

@@ -12,7 +12,7 @@
     "APPS_CALCULATOR": "Calculator",
     "APPS_SETTINGS": "Settings",
     "APPS_BANK": "WhoDis Banking",
-    "APPS_NOTES": "Notes",
+    "APPS_DOCUMENTS": "Documents",
     "APPS_EXAMPLE": "Example app",
     "APPS_TWITTER": "Twitter",
     "APPS_SELLOUT": "Market",
@@ -101,12 +101,13 @@
     "APPS_CONTACT_MODAL_PLACEHOLDER_AVATAR": "Avatar",
     "APPS_CONTACT_MODAL_BUTTON_ADD": "Add Contact",
 
-    "APPS_NOTES_ADD_SUCCESS": "Successfully saved note.",
-    "APPS_NOTES_ADD_FAILED": "Failed to save note.",
-    "APPS_NOTES_UPDATE_SUCCESS": "Successfully updated note.",
-    "APPS_NOTES_UPDATE_FAILED": "Failed to update note.",
-    "APPS_NOTES_DELETE_SUCCESS": "Successfully deleted note.",
-    "APPS_NOTES_DELETE_FAILED": "Failed to delete note.",
+    "APPS_DOCUMENTS_NOTES_TITLE": "Notes",
+    "APPS_DOCUMENTS_ADD_SUCCESS": "Successfully saved note.",
+    "APPS_DOCUMENTS_ADD_FAILED": "Failed to save note.",
+    "APPS_DOCUMENTS_UPDATE_SUCCESS": "Successfully updated note.",
+    "APPS_DOCUMENTS_UPDATE_FAILED": "Failed to update note.",
+    "APPS_DOCUMENTS_DELETE_SUCCESS": "Successfully deleted note.",
+    "APPS_DOCUMENTS_DELETE_FAILED": "Failed to delete note.",
 
     "APPS_CALCULATOR_COPIED": "Result was copied to clipboard!",
 

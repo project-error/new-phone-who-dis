@@ -11,7 +11,7 @@
     "APPS_CALCULATOR": "Calculadora",
     "APPS_SETTINGS": "Ajustes",
     "APPS_BANK": "Banco WhoDis",
-    "APPS_NOTES": "Notas",
+    "APPS_DOCUMENTS": "Notas",
     "APPS_EXAMPLE": "App de Ejemplo",
     "APPS_TWITTER": "Twitter",
     "APPS_SELLOUT": "Mercado",
@@ -94,12 +94,12 @@
     "APPS_CONTACT_MODAL_PLACEHOLDER_AVATAR": "Avatar",
     "APPS_CONTACT_MODAL_BUTTON_ADD": "Agregar contacto",
 
-    "APPS_NOTES_ADD_SUCCESS": "Se ha guardado la nota.",
-    "APPS_NOTES_ADD_FAILED": "Hubo un error al guardar la nota.",
-    "APPS_NOTES_UPDATE_SUCCESS": "Se ha actualizado la nota.",
-    "APPS_NOTES_UPDATE_FAILED": "Hubo un error al actualizar la nota.",
-    "APPS_NOTES_DELETE_SUCCESS": "Se ha borrado la nota.",
-    "APPS_NOTES_DELETE_FAILED": "Hubo un error al borrar la nota.",
+    "APPS_DOCUMENTS_ADD_SUCCESS": "Se ha guardado la nota.",
+    "APPS_DOCUMENTS_ADD_FAILED": "Hubo un error al guardar la nota.",
+    "APPS_DOCUMENTS_UPDATE_SUCCESS": "Se ha actualizado la nota.",
+    "APPS_DOCUMENTS_UPDATE_FAILED": "Hubo un error al actualizar la nota.",
+    "APPS_DOCUMENTS_DELETE_SUCCESS": "Se ha borrado la nota.",
+    "APPS_DOCUMENTS_DELETE_FAILED": "Hubo un error al borrar la nota.",
 
     "APPS_CALCULATOR_COPIED": "Se ha copiado el resultado!",
 

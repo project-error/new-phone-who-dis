@@ -12,7 +12,7 @@
     "APPS_CALCULATOR": "Kalkulator",
     "APPS_SETTINGS": "Instillinger",
     "APPS_BANK": "WhoDis Bank",
-    "APPS_NOTES": "Notater",
+    "APPS_DOCUMENTS": "Notater",
     "APPS_EXAMPLE": "Example app",
     "APPS_TWITTER": "Twitter",
     "APPS_SELLOUT": "Marked",
@@ -101,12 +101,12 @@
     "APPS_CONTACT_MODAL_PLACEHOLDER_AVATAR": "Avatar",
     "APPS_CONTACT_MODAL_BUTTON_ADD": "Legg til",
 
-    "APPS_NOTES_ADD_SUCCESS": "Lagret notat!",
-    "APPS_NOTES_ADD_FAILED": "Kunne ikke lagre notatet!",
-    "APPS_NOTES_UPDATE_SUCCESS": "Oppdatert notat!",
-    "APPS_NOTES_UPDATE_FAILED": "Kunne ikke oppdatere notatet!",
-    "APPS_NOTES_DELETE_SUCCESS": "Slettet notat!",
-    "APPS_NOTES_DELETE_FAILED": "Kunne ikke slette notatet!",
+    "APPS_DOCUMENTS_ADD_SUCCESS": "Lagret notat!",
+    "APPS_DOCUMENTS_ADD_FAILED": "Kunne ikke lagre notatet!",
+    "APPS_DOCUMENTS_UPDATE_SUCCESS": "Oppdatert notat!",
+    "APPS_DOCUMENTS_UPDATE_FAILED": "Kunne ikke oppdatere notatet!",
+    "APPS_DOCUMENTS_DELETE_SUCCESS": "Slettet notat!",
+    "APPS_DOCUMENTS_DELETE_FAILED": "Kunne ikke slette notatet!",
 
     "APPS_CALCULATOR_COPIED": "Teskten ble kopiert til utklippstavle",
 

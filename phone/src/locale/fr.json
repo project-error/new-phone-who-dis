@@ -12,7 +12,7 @@
     "APPS_CALCULATOR": "Calculatrice",
     "APPS_SETTINGS": "Paramètres",
     "APPS_BANK": "WhoDis Banque",
-    "APPS_NOTES": "Notes",
+    "APPS_DOCUMENTS": "Notes",
     "APPS_EXAMPLE": "App test",
     "APPS_TWITTER": "Twitter",
     "APPS_SELLOUT": "Marché",
@@ -101,12 +101,12 @@
     "APPS_CONTACT_MODAL_PLACEHOLDER_AVATAR": "Photo",
     "APPS_CONTACT_MODAL_BUTTON_ADD": "Ajouter un contact",
 
-    "APPS_NOTES_ADD_SUCCESS": "Note sauvegardée avec succès.",
-    "APPS_NOTES_ADD_FAILED": "Erreur lors de la suppression d'une note.",
-    "APPS_NOTES_UPDATE_SUCCESS": "Mise à jour d'une note réalisée avec succès.",
-    "APPS_NOTES_UPDATE_FAILED": "Erreur lors de la mise à jour d'une note.",
-    "APPS_NOTES_DELETE_SUCCESS": "Note supprimée avec succès.",
-    "APPS_NOTES_DELETE_FAILED": "Erreur lors de la suppression d'une note.",
+    "APPS_DOCUMENTS_ADD_SUCCESS": "Note sauvegardée avec succès.",
+    "APPS_DOCUMENTS_ADD_FAILED": "Erreur lors de la suppression d'une note.",
+    "APPS_DOCUMENTS_UPDATE_SUCCESS": "Mise à jour d'une note réalisée avec succès.",
+    "APPS_DOCUMENTS_UPDATE_FAILED": "Erreur lors de la mise à jour d'une note.",
+    "APPS_DOCUMENTS_DELETE_SUCCESS": "Note supprimée avec succès.",
+    "APPS_DOCUMENTS_DELETE_FAILED": "Erreur lors de la suppression d'une note.",
 
     "APPS_CALCULATOR_COPIED": "Résultat copié dans le presse-papier!",
 
@@ -120,7 +120,7 @@
     "APPS_SETTINGS_OPTION_NOTIFICATION_FILTER": "Filtre de notification",
     "APPS_SETTINGS_OPTION_NOTIFICATION": "Notification",
     "APPS_SETTINGS_OPTION_NOTIFICATIONVOL": "Volume des notifications",
-    
+
     "APPS_MARKETPLACE_CREATE_LISTING_SUCCESS": "Nouvelle liste créée avec succès!",
     "APPS_MARKETPALCE_CREATE_LISTING_FAILED": "Échec lors de la création d'une nouvelle liste",
     "APPS_MARKETPLACE_DELETE_LISTING_SUCCESS": "Liste supprimée avec succès",

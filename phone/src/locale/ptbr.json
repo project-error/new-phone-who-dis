@@ -12,7 +12,7 @@
     "APPS_CALCULATOR": "Calculadora",
     "APPS_SETTINGS": "Configurações​",
     "APPS_BANK": "Banco WhoDis",
-    "APPS_NOTES": "Notas",
+    "APPS_DOCUMENTS": "Notas",
     "APPS_EXAMPLE": "Aplicativo de exemplo",
     "APPS_TWITTER": "Twitter",
     "APPS_SELLOUT": "Market",
@@ -112,12 +112,12 @@
     "APPS_CONTACT_MODAL_PLACEHOLDER_AVATAR": "Foto de perfil",
     "APPS_CONTACT_MODAL_BUTTON_ADD": "Adcionar contato",
 
-    "APPS_NOTES_ADD_SUCCESS": "Nota salva com sucesso.",
-    "APPS_NOTES_ADD_FAILED": "Falha em salvar nota.",
-    "APPS_NOTES_UPDATE_SUCCESS": "Nota atualizada com sucesso.",
-    "APPS_NOTES_UPDATE_FAILED": "Falha em atualizar nota.",
-    "APPS_NOTES_DELETE_SUCCESS": "Nota deletada com sucesso.",
-    "APPS_NOTES_DELETE_FAILED": "Falha em deletar nota.",
+    "APPS_DOCUMENTS_ADD_SUCCESS": "Nota salva com sucesso.",
+    "APPS_DOCUMENTS_ADD_FAILED": "Falha em salvar nota.",
+    "APPS_DOCUMENTS_UPDATE_SUCCESS": "Nota atualizada com sucesso.",
+    "APPS_DOCUMENTS_UPDATE_FAILED": "Falha em atualizar nota.",
+    "APPS_DOCUMENTS_DELETE_SUCCESS": "Nota deletada com sucesso.",
+    "APPS_DOCUMENTS_DELETE_FAILED": "Falha em deletar nota.",
 
     "APPS_CALCULATOR_COPIED": "Resultado foi copiado para a área de transferência!",
 
