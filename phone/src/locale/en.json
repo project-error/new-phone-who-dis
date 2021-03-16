@@ -102,6 +102,7 @@
     "APPS_CONTACT_MODAL_BUTTON_ADD": "Add Contact",
 
     "APPS_DOCUMENTS_NOTES_TITLE": "Notes",
+    "APPS_DOCUMENTS_LICENSE_TITLE": "Licenses",
     "APPS_DOCUMENTS_ADD_SUCCESS": "Successfully saved note.",
     "APPS_DOCUMENTS_ADD_FAILED": "Failed to save note.",
     "APPS_DOCUMENTS_UPDATE_SUCCESS": "Successfully updated note.",
