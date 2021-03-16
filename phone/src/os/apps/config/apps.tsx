@@ -12,6 +12,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import ContactsIcon from '@material-ui/icons/Contacts';
 import SettingsIcon from '@material-ui/icons/Settings';
+import FolderIcon from '@material-ui/icons/Folder';
 import MessageIcon from '@material-ui/icons/Message';
 import { CalculatorIcon } from '../../../apps/calculator/components/CalculatorIcon';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
@@ -24,7 +25,7 @@ import { MessagesApp } from '../../../apps/messages/components/MessagesApp';
 import { TwitterApp } from '../../../apps/twitter/components/TwitterApp';
 import { ExampleApp } from '../../../apps/example/components/ExampleApp';
 import { SelloutApp } from '../../../apps/sellout/components/SelloutApp';
-import { NotesApp } from '../../../apps/notes/NotesApp';
+import { NotesApp } from '../../../apps/notes/DoucmentsApp';
 import CameraApp from '../../../apps/camera/components/CameraApp';
 import { AppRoute } from '../components/AppRoute';
 
@@ -40,7 +41,10 @@ import {
   SELLOUT_APP_PRIMARY_COLOR,
   SELLOUT_APP_ICON_COLOR,
 } from '../../../apps/sellout/sellout.theme';
-import { NOTES_APP_ICON_COLOR, NOTES_APP_PRIMARY_COLOR } from '../../../apps/notes/notes.theme';
+import {
+  DOCUMENTS_APP_ICON_COLOR,
+  DOCUMENTS_APP_PRIMARY_COLOR,
+} from '../../../apps/notes/notes.theme';
 import { DIALER_APP_PRIMARY_COLOR, DIALER_APP_TEXT_COLOR } from '../../../apps/dialer/dialer.theme';
 import {
   TWITTER_APP_PRIMARY_COLOR,
@@ -140,14 +144,14 @@ export const APPS: IAppConfig[] = [
     Route: () => <AppRoute id="SELLOUT" path="/sellout" component={SelloutApp} />,
   },
   {
-    id: 'NOTES',
-    nameLocale: 'APPS_NOTES',
-    icon: <FontAwesomeIcon icon={faStickyNote} fixedWidth />,
+    id: 'DOCUMENTS',
+    nameLocale: 'APPS_DOCUMENTS',
+    icon: <FolderIcon fontSize="large" />,
     notificationIcon: <FontAwesomeIcon icon={faStickyNote} fixedWidth size="xs" />,
-    backgroundColor: NOTES_APP_PRIMARY_COLOR,
-    color: NOTES_APP_ICON_COLOR,
-    path: '/notes',
-    Route: () => <AppRoute id="NOTES" path="/notes" component={NotesApp} />,
+    backgroundColor: DOCUMENTS_APP_PRIMARY_COLOR,
+    color: DOCUMENTS_APP_ICON_COLOR,
+    path: '/documents',
+    Route: () => <AppRoute id="DOCUMENTS" path="/documents" component={NotesApp} />,
   },
   {
     id: 'CAMERA',
