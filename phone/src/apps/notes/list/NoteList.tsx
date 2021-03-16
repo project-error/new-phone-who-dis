@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fab, List, ListItem, ListItemText } from '@material-ui/core';
+import { Fab, List, ListItem, ListItemText, Box, Typography } from '@material-ui/core';
 import { useNoteDetail } from '../hooks/useNoteDetail';
 import { useNotes } from '../hooks/useNotes';
 import { useHistory } from 'react-router-dom';

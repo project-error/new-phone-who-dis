@@ -8,7 +8,7 @@ import {
   CircularProgress,
   Box,
 } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { useNoteDetail } from '../hooks/useNoteDetail';
 import useStyles from './modal.styles';
@@ -16,12 +16,18 @@ import Nui from '../../../os/nui-events/utils/Nui';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import { StatusButton } from '../../../ui/components/StatusButton';
+import ShareIcon from '@material-ui/icons/Share';
+import Modal from '../../../ui/components/Modal';
+import { Autocomplete } from '@material-ui/lab';
 
 export const NoteModal = () => {
   const classes = useStyles();
   const history = useHistory();
   const { t } = useTranslation();
   const { detail, setDetail } = useNoteDetail();
+
+  const [open, setOpen] = useState(false);
+  const [number, setNumber] = useState('');
 
   const onClose = () => history.goBack();
 
@@ -51,9 +57,43 @@ export const NoteModal = () => {
     onClose();
   };
 
+  const handleShareNoteModal = () => setOpen(true);
+
+  const NoteShareModal = () => {
+    const opts = [
+      {
+        title: 'Nice',
+      },
+      {
+        title: 'wtf',
+      },
+    ];
+
+    const handleShareNote = () => {
+      Nui.send('phone:shareNote', {});
+    };
+
+    return (
+      <Modal visible={open} handleClose={() => setOpen(false)}>
+        <Autocomplete
+          freeSolo
+          disableClearable
+          options={opts.map((op) => op.title)}
+          onChange={(e: any) => setNumber(e.currentTarget.value)}
+          renderInput={(params) => (
+            <TextField {...params} label="Search contacts" margin="normal" />
+          )}
+        />
+        <Button onClick={handleShareNote}>Share</Button>
+      </Modal>
+    );
+  };
+
   return (
     <Slide direction="left" in={!!detail}>
       <Paper className={classes.modalRoot}>
+        <NoteShareModal />
+        <div className={open ? classes.backgroundModal : undefined} />
         {!detail ? (
           <CircularProgress />
         ) : (
@@ -125,6 +165,11 @@ export const NoteModal = () => {
                     <StatusButton color="error" variant="contained" onClick={handleDeleteNote}>
                       {t('GENERIC_DELETE')}
                     </StatusButton>
+                  </Box>
+                  <Box display="inline" p={1}>
+                    <Button color="primary" onClick={handleShareNoteModal}>
+                      <ShareIcon />
+                    </Button>
                   </Box>
                 </>
               )}
