@@ -9,7 +9,9 @@ export interface AppContentTypes {
 
 export interface AppWrapperTypes {
   id?: string;
+  appName?: string;
   children?: JSX.Element | JSX.Element[];
   style?: CSSProperties;
   handleClickAway?: (...args: any[]) => void;
+  sideMenu?: string[];
 }
