@@ -1,7 +1,7 @@
 import { useRecoilValue } from 'recoil';
 import { simcardState } from './state';
 
-export const useSimcard = () => {
+export const useMyPhoneNumber = () => {
   const number = useRecoilValue(simcardState.number);
   return { number };
 };

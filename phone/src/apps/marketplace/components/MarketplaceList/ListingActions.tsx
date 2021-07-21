@@ -2,7 +2,7 @@ import { Box, Tooltip, Button } from '@material-ui/core';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import React from 'react';
 import { MarketplaceEvents, MarketplaceListing } from '../../../../../../typings/marketplace';
-import { useSimcard } from '../../../../os/simcard/hooks/useSimcard';
+import { useMyPhoneNumber } from '../../../../os/simcard/hooks/useMyPhoneNumber';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ReportIcon from '@material-ui/icons/Report';
 import ChatIcon from '@material-ui/icons/Chat';
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export const ListingActions: React.FC<MarketplaceListing> = ({ children, ...listing }) => {
   const Nui = useNuiRequest();
   const classes = useStyles();
-  const { number: myNumber } = useSimcard();
+  const { number: myNumber } = useMyPhoneNumber();
   const { t } = useTranslation();
   const history = useHistory();
   const { addAlert } = useSnackbar();

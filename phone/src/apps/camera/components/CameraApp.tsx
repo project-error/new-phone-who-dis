@@ -13,7 +13,7 @@ InjectDebugData([
     app: 'CAMERA',
     method: PhotoEvents.SEND_PHOTOS,
     data: [
-      {
+      {log
         id: 1,
         image: 'https://beta.iodine.gg/noDcb.jpeg',
       },

@@ -14,8 +14,7 @@ import { useTwitterService } from './apps/twitter/hooks/useTwitterService';
 import { useMatchService } from './apps/match/hooks/useMatchService';
 import { useMarketplaceService } from './apps/marketplace/hooks/useMarketplaceService';
 import { useBankService } from './apps/bank/hooks/useBankService';
-import { useMessagesService } from './apps/messages/hooks/useMessageService';
-import { usePhotoService } from './apps/camera/hooks/usePhotoService';
+import { useMessageActions } from './apps/messages/hooks/useMessageActions';
 import { isSettingsSchemaValid, useSettings } from './apps/settings/hooks/useSettings';
 import { useCallService } from './os/call/hooks/useCallService';
 import { useDialService } from './apps/dialer/hooks/useDialService';
@@ -69,7 +68,7 @@ function Phone() {
   useMatchService();
   useMarketplaceService();
   useBankService();
-  useMessagesService();
+  useMessageActions();
   /*usePhotoService();*/
   useCallService();
   useDialService();

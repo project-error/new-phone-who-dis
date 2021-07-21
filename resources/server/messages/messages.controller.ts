@@ -3,24 +3,6 @@ import { MessageEvents } from '../../../typings/messages';
 import MessagesService from './messages.service';
 import { messagesLogger } from './messages.utils';
 
-onNet(MessageEvents.FETCH_MESSAGE_GROUPS, async () => {
-  const src = getSource();
-  MessagesService.handleFetchMessageGroups(src).catch((e) =>
-    messagesLogger.error(
-      `Error occurred in fetch messag group event (${src}), Error: ${e.message}`,
-    ),
-  );
-});
-
-onNet(MessageEvents.CREATE_MESSAGE_GROUP, async (phoneNumbers: string[], label: string = null) => {
-  const src = getSource();
-  MessagesService.handleCreateMessageGroup(src, phoneNumbers, label).catch((e) =>
-    messagesLogger.error(
-      `Error occurred in create message group event (${src}), Error: ${e.message}`,
-    ),
-  );
-});
-
 onNet(MessageEvents.FETCH_MESSAGES, async (groupId: string) => {
   const src = getSource();
   MessagesService.handleFetchMessages(src, groupId).catch((e) =>

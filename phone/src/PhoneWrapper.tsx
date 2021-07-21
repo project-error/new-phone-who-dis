@@ -27,7 +27,7 @@ const PhoneWrapper: React.FC = ({ children }) => {
             }}
           />
           <div
-            id="phone"
+            id="phone-screen-node"
             className="PhoneScreen"
             style={{
               backgroundImage: !isDefaultWallpaper(settings.wallpaper.value)

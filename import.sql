@@ -121,28 +121,18 @@ CREATE TABLE IF NOT EXISTS `npwd_twitter_reports` (
   CONSTRAINT `report_tweet` FOREIGN KEY (`tweet_id`) REFERENCES `npwd_twitter_tweets` (`id`) ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS `npwd_messages_groups` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `user_identifier` varchar(48) NOT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `group_id` varchar(512) NOT NULL,
-  `participant_identifier` varchar(48) NOT NULL,
-  `label` varchar(60) DEFAULT '',
-  `unreadCount` int(11) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`)
-);
-
 CREATE TABLE IF NOT EXISTS `npwd_messages` (
   `id` int NOT NULL AUTO_INCREMENT,
   `message` varchar(512) NOT NULL,
-  `user_identifier` varchar(48) NOT NULL,
-  `group_id` varchar(512) NOT NULL,
-  `isRead` tinyint NOT NULL DEFAULT '0',
-  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `author_phonenumber` varchar(48) NOT NULL,
+  `receiver_phonenumber` varchar(48) NOT NULL,
+  `isReadBy` varchar(512) NOT NULL DEFAULT '[]',
+  `createdAt` timestamp NOT NULL DEFAULT UNIX_TIMESTAMP(),
+  `updatedAt` timestamp NOT NULL DEFAULT UNIX_TIMESTAMP() ON UPDATE UNIX_TIMESTAMP(),
   `visible` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  INDEX (`author_phonenumber`),
+  INDEX (`receiver_phonenumber`)
 );
 
 CREATE TABLE IF NOT EXISTS `npwd_calls` (

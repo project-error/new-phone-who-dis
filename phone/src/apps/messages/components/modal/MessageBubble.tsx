@@ -55,28 +55,29 @@ export const MessageBubble = ({
   onClickDisplay(phoneNumber: string): void;
 }) => {
   const classes = useStyles();
-  return (
-    <div className={classes.root}>
-      <Paper className={message.isMine ? classes.mySms : classes.sms} variant="outlined">
-        <Box className={classes.message}>
-          {isImage(message.message) ? (
-            <PictureReveal>
-              <PictureResponsive src={message.message} alt="message multimedia" />
-            </PictureReveal>
-          ) : (
-            <div>{message.message}</div>
-          )}
-        </Box>
-        <Box>
-          {isGroupChat && !message.isMine ? (
-            <Link onClick={() => onClickDisplay(message.phone_number)}>
-              <Typography variant="subtitle1" color="secondary">
-                {message.display || message.phone_number}
-              </Typography>
-            </Link>
-          ) : null}
-        </Box>
-      </Paper>
-    </div>
-  );
+
+  return <div />;
+  // <div className={classes.root}>
+  //   <Paper className={message.isMine ? classes.mySms : classes.sms} variant="outlined">
+  //     <Box className={classes.message}>
+  //       {isImage(message.message) ? (
+  //         <PictureReveal>
+  //           <PictureResponsive src={message.message} alt="message multimedia" />
+  //         </PictureReveal>
+  //       ) : (
+  //         <div>{message.message}</div>
+  //       )}
+  //     </Box>
+  //     <Box>
+  //       {isGroupChat && !message.isMine ? (
+  //         <Link onClick={() => onClickDisplay(message.phone_number)}>
+  //           <Typography variant="subtitle1" color="secondary">
+  //             {message.display || message.phone_number}
+  //           </Typography>
+  //         </Link>
+  //       ) : null}
+  //     </Box>
+  //   </Paper>
+  // </div>
+  // );
 };

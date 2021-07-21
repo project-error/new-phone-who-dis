@@ -17,7 +17,7 @@ export const MessagesApp = () => {
   const Nui = useNuiRequest();
   const messages = useApp('MESSAGES');
   const history = useHistory();
-  
+
   useEffect(() => {
     Nui.send(MessageEvents.FETCH_MESSAGE_GROUPS);
   }, [Nui]);
@@ -94,7 +94,7 @@ InjectDebugData(
   [
     {
       app: 'MESSAGES',
-      method: MessageEvents.FETCH_MESSAGES_SUCCESS,
+      method: MessageEvents.MESSAGE_BROADCAST,
       data: [
         {
           id: 1,
