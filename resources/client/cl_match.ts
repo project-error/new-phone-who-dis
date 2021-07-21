@@ -1,5 +1,9 @@
 import { Like, Profile, MatchEvents } from '../../typings/match';
 import { sendMatchEvent } from '../utils/messages';
+import { RegisterNuiProxy } from './cl_utils';
+
+RegisterNuiProxy(MatchEvents.GET_PROFILES);
+RegisterNuiProxy(MatchEvents.GET_MY_PROFILE);
 
 /**
  * Many events that are just statuses are passed directly from
@@ -8,9 +12,11 @@ import { sendMatchEvent } from '../utils/messages';
  * data associated with the event.
  * @param eventName - event we are propagating
  */
-const transferEvent = (eventName: string) => (...args: any) => {
-  sendMatchEvent(eventName, ...args);
-};
+const transferEvent =
+  (eventName: string) =>
+  (...args: any) => {
+    sendMatchEvent(eventName, ...args);
+  };
 
 onNet(MatchEvents.GET_PROFILES_FAILED, transferEvent(MatchEvents.GET_PROFILES_FAILED));
 onNet(MatchEvents.SAVE_LIKES_SUCCESS, transferEvent(MatchEvents.SAVE_LIKES_SUCCESS));

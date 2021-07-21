@@ -1,7 +1,9 @@
 import { matchLogger } from './match.utils';
 import MatchDB, { _MatchDB } from './match.db';
-import { Like, MatchEvents, Profile } from '../../../typings/match';
+import { FormattedProfile, Like, MatchEvents, Profile } from '../../../typings/match';
 import PlayerService from '../players/player.service';
+import { PromiseEventResp, PromiseRequest } from '../utils/PromiseNetEvents/promise.types';
+import { makeAfterCompile } from 'ts-loader/dist/after-compile';
 
 class _MatchService {
   private readonly matchDB: _MatchDB;
@@ -10,10 +12,11 @@ class _MatchService {
     matchLogger.debug('Match service started');
   }
 
-  async dispatchPlayerProfile(identifier: string, source: number): Promise<void> {
+  async dispatchPlayerProfile(identifier: string, source: number): Promise<Profile> {
     try {
       const profile = await this.matchDB.getOrCreateProfile(identifier);
-      emitNet(MatchEvents.GET_MY_PROFILE_SUCCESS, source, profile);
+      /* emitNet(MatchEvents.GET_MY_PROFILE_SUCCESS, source, profile); */
+      return profile;
     } catch (e) {
       matchLogger.error(`Failed to get player profile, ${e.message}`);
       emitNet(MatchEvents.GET_MY_PROFILE_FAILED, source, {
@@ -23,10 +26,11 @@ class _MatchService {
     }
   }
 
-  async dispatchProfiles(identifier: string, source: number): Promise<void> {
+  async dispatchProfiles(identifier: string, source: number): Promise<Profile[]> {
     try {
       const profiles = await this.matchDB.getPotentialProfiles(identifier);
-      emitNet(MatchEvents.GET_PROFILES_SUCCESS, source, profiles);
+      /*emitNet(MatchEvents.GET_PROFILES_SUCCESS, source, profiles);*/
+      return profiles;
     } catch (e) {
       matchLogger.error(`Failed to retrieve profiles, ${e.message}`);
       emitNet(MatchEvents.GET_PROFILES_FAILED, source, {
@@ -36,14 +40,35 @@ class _MatchService {
     }
   }
 
-  async handleInitialize(src: number) {
+  async handleFetchProfiles(reqObj: PromiseRequest<void>, resp: PromiseEventResp<Profile[]>) {
+    try {
+      const identifier = PlayerService.getIdentifier(reqObj.source);
+      const profiles = await this.dispatchProfiles(identifier, reqObj.source);
+      resp({ status: 'ok', data: profiles });
+    } catch (e) {
+      resp({ status: 'error', errorMsg: 'DB_ERROR' });
+    }
+  }
+
+  async handleFetchMyProfile(reqObj: PromiseRequest<void>, resp: PromiseEventResp<Profile>) {
+    try {
+      const identifier = PlayerService.getIdentifier(reqObj.source);
+      const profile = await this.dispatchPlayerProfile(identifier, reqObj.source);
+      await this.matchDB.updateLastActive(identifier);
+      resp({ status: 'ok', data: profile });
+    } catch (e) {
+      resp({ status: 'error', errorMsg: 'DB_ERROR' });
+    }
+  }
+
+  /* async handleInitialize(src: number) {
     const identifier = PlayerService.getIdentifier(src);
     matchLogger.debug(`Initializing match for identifier: ${identifier}`);
 
     await this.dispatchPlayerProfile(identifier, src);
     await this.dispatchProfiles(identifier, src);
     await this.matchDB.updateLastActive(identifier);
-  }
+  } */
 
   async handleCreateMyProfile(src: number, profile: Profile) {
     const identifier = PlayerService.getIdentifier(src);

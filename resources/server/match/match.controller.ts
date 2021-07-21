@@ -1,14 +1,31 @@
-import { Like, MatchEvents, Profile } from '../../../typings/match';
+import { FormattedProfile, Like, MatchEvents, Profile } from '../../../typings/match';
 import MatchService from './match.service';
 import { getSource } from '../utils/miscUtils';
 import { matchLogger } from './match.utils';
 import { config } from '../server';
-
+import { onNetPromise } from '../utils/PromiseNetEvents/onNetPromise';
+/*
 onNet(MatchEvents.INITIALIZE, () => {
   const _source = getSource();
   MatchService.handleInitialize(_source).catch((e) =>
     matchLogger.error(`Error occurred in initialize event (${_source}), Error: ${e.message}`),
   );
+});*/
+
+onNetPromise<void, Profile>(MatchEvents.GET_MY_PROFILE, (reqObj, resp) => {
+  MatchService.handleFetchMyProfile(reqObj, resp).catch((e) => {
+    matchLogger.error(`Error occurred in initialize event (${reqObj.source}), Error: ${e.message}`);
+    resp({ status: 'error', errorMsg: 'INTERNAL_ERROR ' });
+  });
+});
+
+onNetPromise<void, FormattedProfile[]>(MatchEvents.GET_PROFILES, (reqObj, resp) => {
+  MatchService.handleFetchProfiles(reqObj, resp).catch((e) => {
+    matchLogger.error(
+      `Error occurred in fetch profiles event (${reqObj.source}), Error: ${e.message}`,
+    );
+    resp({ status: 'error', errorMsg: 'INTERNAL_ERROR' });
+  });
 });
 
 onNet(MatchEvents.CREATE_MY_PROFILE, (profile: Profile) => {
